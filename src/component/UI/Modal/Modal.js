@@ -9,7 +9,7 @@ class Modal extends Component {
     // This component should update only if the 'show' property changes
     // Limiting Modal update will in turn limit the update of OrderSummary. 
     shouldComponentUpdate(nextProps, nextState){
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     componentWillUpdate() {
